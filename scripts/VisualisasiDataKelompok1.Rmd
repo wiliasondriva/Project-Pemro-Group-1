@@ -1,0 +1,120 @@
+---
+title: "Visualisasi Data Tugas Pemro"
+author: "Kelompok 1"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Analisis Data Eksploratif (EDA)
+
+### 1. Setup Awal
+
+```{r}
+# Memuat library yang diperlukan
+library(knitr)    
+library(ggplot2)  
+library(tidyr)
+library(readxl)
+library(dplyr)
+# 1. MEMUAT DATA
+data_final <- read_excel("data_final_bersih.xlsx")
+head(data_final)
+```
+
+### 2. Analisis Data Eksploratif (EDA)
+
+#### Statistik Deskriptif
+
+Pertama, akan melihat ringkasan statistik dasar untuk semua variabel. Fungsi summary() akan memberi kita Min (Minimum), Median, Mean (Rata-rata), dan Max (Maksimum). Untuk Varians, kita perlu menghitungnya secara terpisah.
+
+```{r}
+# 2. Statistik deskriptif dasar (Min, Median, Mean, Max, Kuartil)
+summary(data_final)
+
+# 3. Menghitung Varians
+varians_data <- data_final %>%
+  select(where(is.numeric)) %>%  # Memilih hanya kolom numerik
+  summarise(across(everything(), ~ var(.x, na.rm = TRUE))) %>%
+  # Merapikan tabel untuk dibaca
+  pivot_longer(everything(), names_to = "Variabel", values_to = "Varians")
+kable(varians_data, caption = "Varians untuk Setiap Variabel Numerik")
+```
+
+#### Visualisasi Data (ggplot2)
+
+##### Histogram Variabel Respon (Jumlah Kejahatan)
+
+Histogram dibuat untuk melihat distribusi dari variabel respon, yaitu Jumlah Kejahatan yang Dilaporkan. Ini membantu kita melihat apakah datanya skewed (miring) atau tidak.
+
+```{r}
+# Membuat histogram untuk 'Jumlah Kejahatan yang Dilaporkan'
+ggplot(data_final, aes(x = `Jumlah Kejahatan yang Dilaporkan`)) +
+  geom_histogram(bins = 10, fill = "#0072B2", color = "black", alpha = 0.7) +
+  labs(
+    title = "Distribusi Jumlah Kejahatan yang Dilaporkan",
+    x = "Jumlah Kejahatan",
+    y = "Frekuensi (Jumlah Polres)"
+  ) +
+  theme_minimal()
+```
+
+Penjelasan: Dari histogram ini, kita bisa melihat bahwa sebagian besar Polres memiliki jumlah kejahatan di angka yang rendah, namun ada beberapa Polres dengan jumlah kejahatan yang sangat tinggi (ekor di sebelah kanan). Ini disebut right-skewed.
+
+##### Boxplot Distribusi Variabel
+
+Boxplot berguna untuk melihat rentang data (dari min ke max), interquartile range (IQR), median, dan mendeteksi outlier. Scaling (standardisasi) perlu dilakukan terlebih dahulu untuk membandingkan distribusi semua variabel, karena satuannya berbeda-beda (misal Upah dalam jutaan, Pengangguran hanya satuan).
+
+```{r}
+# 1. Menyiapkan data: Pilih numerik -> scaling -> ubah ke format 'long'
+data_scaled_long <- data_final %>%
+  select(where(is.numeric)) %>%
+  scale() %>% # Scaling data (Z-score)
+  as.data.frame() %>%
+  pivot_longer(everything(), names_to = "Variabel", values_to = "Nilai_Terskala")
+
+# 2. Membuat boxplot
+ggplot(data_scaled_long, aes(x = Variabel, y = Nilai_Terskala)) +
+  geom_boxplot(fill = "lightblue", outlier.color = "red") +
+  coord_flip() + # Memutar plot agar label variabel mudah dibaca
+  labs(
+    title = "Boxplot Variabel Numerik (Setelah Scaling)",
+    x = "Variabel",
+    y = "Nilai Terskala (Z-score)"
+  ) +
+  theme_bw()
+```
+
+Penjelasan: Boxplot ini menunjukkan perbandingan sebaran data untuk setiap variabel. Kita bisa melihat bahwa variabel seperti Produk Domestik Regional Bruto dan Besaran Upah Minimum memiliki beberapa nilai outlier (titik merah) di sisi atas.
+
+##### Scatter Plot (Hubungan Antar Variabel)
+
+Terakhir, scatter plot dibuat untuk melihat hubungan antara variabel predictor (sosial ekonomi) dengan variabel response (Jumlah Kejahatan). Agar efisien, kita akan menggunakan pivot_longer() untuk merapikan data, lalu facet_wrap() untuk membuat semua plot dalam satu gambar.
+
+```{r}
+# 1. Ubah data ke format 'long'
+# Kita pisahkan variabel Sosial ekonomi (prediktor) dan Kejahatan (respon)
+data_plot_long <- data_final %>%
+  pivot_longer(
+    cols = -c(`Satuan Wilayah Hukum`, `Jumlah Kejahatan yang Dilaporkan`),
+    names_to = "Variabel_Sosek",
+    values_to = "Nilai"
+  )
+
+# 2. Membuat scatter plot dengan facet_wrap
+ggplot(data_plot_long, aes(x = Nilai, y = `Jumlah Kejahatan yang Dilaporkan`)) +
+  geom_point(color = "#D55E00", alpha = 0.8) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue", linetype = "dashed") +
+  # facet_wrap sangat penting di sini
+  # scales = "free_x" mengizinkan sumbu X memiliki skala berbeda-beda
+  facet_wrap(~ Variabel_Sosek, scales = "free_x", ncol = 3) +
+  labs(
+    title = "Hubungan Antara Jumlah Kejahatan dan Variabel Sosek",
+    x = "Nilai Variabel Sosial Ekonomi",
+    y = "Jumlah Kejahatan"
+  ) +
+  theme_bw()
+```
+
+Penjelasan : Grafik: Setiap kotak adalah scatter plot antara satu variabel sosek (sumbu X) dan Jumlah Kejahatan (sumbu Y). Garis Biru: Ini adalah garis regresi linear.
+
+Interpretasi Awal: Jika garis naik (positif), seperti pada kepadatan_penduduk atau besaran_upah_minimum, artinya ada indikasi awal: semakin tinggi nilai variabel itu, semakin tinggi pula jumlah kejahatannya. Jika garis datar atau turun (negatif), hubungannya mungkin lemah atau berbanding terbalik.
