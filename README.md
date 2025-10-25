@@ -1,10 +1,12 @@
 # Analisis Tingkat Kriminalitas di Provinsi Jawa Barat Tahun 2024
 
 ## Struktur Folder
-- `data/` : berisi dataset mentah dan hasil olahan
-- `scripts/` : berisi kode R
-- `results/` : hasil analisis dan visualisasi
-- `docs/` : catatan atau laporan
+- `data/raw/` : data mentah (tidak diubah manual)
+- `data/processed/` : data setelah dibersihkan (missing value, transformasi)
+- `scripts/` : kode R untuk import data, fitting model, evaluasi
+- `results/figures/` : visualisasi model dan error
+- `results/tables/` : ringkasan metrik evaluasi (RMSE, MAE)
+- `docs/` : catatan analisis / draft laporan
 
 ## 1. Latar Belakang
 Penelitian ini ...
