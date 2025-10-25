@@ -11,7 +11,15 @@
 ## 1. Latar Belakang
 Penelitian ini ...
 
-## 2. Tahapan analisis
+## 2. Data
+<p align="center">
+  <img src="images/logo_bps.png" width="250">
+</p>
+### Variabel Penjelas (X)
+
+### Variabel Respon (Y)
+
+## 3. Tahapan analisis
 1. Mengumpulkan data dari berbagai pangkalan data.
 2. Melakukan eksplorasi data dengan mendeskripsikan data yang diperoleh.
 3. Menguji sebaran pada peubah respon, apakah benar memiliki sebaran poisson atau tidak.
