@@ -13,7 +13,7 @@ Penelitian ini ...
 
 ## 2. Data
 <p align="center">
-  <img src="images/logo_bps.png" width="250">
+  <img src="results/figures/Logo_bps.png" width="250">
 </p>
 ### Variabel Penjelas (X)
 
