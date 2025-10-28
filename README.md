@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="results/figures/Logo_IPB.png" width="200">
+</p>
+
 # Analisis Tingkat Kriminalitas di Provinsi Jawa Barat Tahun 2024
 
 ## Struktur Folder
