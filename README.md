@@ -15,6 +15,7 @@ Penelitian ini ...
 <p align="center">
   <img src="results/figures/Logo_bps.png" width="250">
 </p>
+
 ### Variabel Penjelas (X)
 
 ### Variabel Respon (Y)
@@ -28,7 +29,7 @@ Penelitian ini ...
 6. Menentukan model regresi binomial negatif.
 7. Menghitung nilai AIC untuk memilih model terbaik
 
-Commit changes
-[  add: README for Analisis Kriminalitas Jabar 2024              ]
-( ) Commit directly to the main branch
-( ) Create a new branch for this commit and start a pull request
+### Cuplikan Visual
+<p align="center">
+  <img src="results/figures/Logo_bps.png" width="250">
+</p>
