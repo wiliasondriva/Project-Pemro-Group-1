@@ -15,16 +15,28 @@
 ## 1. Latar Belakang
 Penelitian ini ...
 
-## 2. Data
+## 2. Tujuan Penelitian
+
+
+## 3. Data dan Variabel
 <p align="center">
   <img src="results/figures/Logo_bps.png" width="250">
 </p>
 
 ### Variabel Penjelas (X)
+- Upah Minimum Kabupaten
+- Kepadatan Penduduk
+- Produk Domestik Regional Bruto (PDRB)
+- Tingkat Pengangguran Terbuka
+- Jumlah Putus Sekolah
 
 ### Variabel Respon (Y)
+- Jumlah Kejahatan yang dilaporkan
 
-## 3. Tahapan analisis
+## 3. Metodologi
+
+
+## 4. Tahapan analisis
 1. Mengumpulkan data dari berbagai pangkalan data.
 2. Melakukan eksplorasi data dengan mendeskripsikan data yang diperoleh.
 3. Menguji sebaran pada peubah respon, apakah benar memiliki sebaran poisson atau tidak.
@@ -32,8 +44,3 @@ Penelitian ini ...
 5. Mengidentifikasi overdisprsi dengan mengitung nilai koefisien disperse.
 6. Menentukan model regresi binomial negatif.
 7. Menghitung nilai AIC untuk memilih model terbaik
-
-### Cuplikan Visual
-<p align="center">
-  <img src="results/figures/Logo_bps.png" width="250">
-</p>
