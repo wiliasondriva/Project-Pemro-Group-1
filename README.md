@@ -1,4 +1,4 @@
-<p align="center">
+<img width="77" height="21" alt="image" src="https://github.com/user-attachments/assets/a7fe4720-4787-486e-b96b-4f5e069313d3" /><p align="center">
   <img src="results/figures/Logo_IPB.png" width="200">
 </p>
 
@@ -20,7 +20,8 @@ Penelitian ini ...
 
 ## 3. Data dan Variabel
 <p align="center">
-  <img src="results/figures/Logo_bps.png" width="250">
+  <img src="results/figures/Logo_bps.png" width="200" style="margin-right: 20px;">
+  <img src="results/figures/Logo Dinas Pendidikan Jawa Barat.png" width="200">
 </p>
 
 ### Variabel Penjelas (X)
@@ -33,6 +34,22 @@ Penelitian ini ...
 ### Variabel Respon (Y)
 - Jumlah Kejahatan yang dilaporkan
 
+### Dataset
+| No | Satuan Wilayah Hukum      | Jumlah Kejahatan | Upah Minimum Kab. | Kepadatan Penduduk |  PDRB  | T. Pengangguran Terbuka | Putus Sekolah |
+|----|---------------------------|------------------|-------------------|--------------------|--------|-------------------------|---------------|
+| 1  | Polres Bogor              | 4030             | 4579541           | 1.942              | 54857  | 7.34                    | 24            |
+| 2  | Polres Ciamis             | 1077             | 2089464           | 813                | 34336  | 3.37                    | 5             |
+| 3  | Polres Cianjur            | 1951             | 2915102           | 727                | 24914  | 5.99                    | 27            |
+| …  | …                         | …                | …                 | …                  | …      | …                       | …             |
+| 21 | Polresta Kota Bogor       | 1576             | 4813988           | 10.273             | 56616  | 8.13                    | 1             |
+| 22 | Polresta Cirebon          | 1719             | 2517730           | 2.312              | 28140  | 6.74                    | 3             |
+| 23 | Polrestabes Kota Bandung  | 4036             | 4209309           | 15.557             | 147081 | 7.4                     | 17            |
+
+### Scatterplot Variabel X terhadap Y
+<p align="center">
+  <img src="results/figures/scatterplot.png" width="800">
+</p>
+
 ## 3. Metodologi
 
 
@@ -44,3 +61,9 @@ Penelitian ini ...
 5. Mengidentifikasi overdisprsi dengan mengitung nilai koefisien disperse.
 6. Menentukan model regresi binomial negatif.
 7. Menghitung nilai AIC untuk memilih model terbaik
+
+## 5. Visualisasi
+### Peta Kriminalitas Jawa Barat
+<p align="center">
+  <img src="results/figures/Peta Kriminalitas.png" width="1000">
+</p>
