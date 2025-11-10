@@ -67,3 +67,31 @@ Penelitian ini ...
 <p align="center">
   <img src="results/figures/Peta Kriminalitas.png" width="1000">
 </p>
+
+## 👥 Team Members
+<p align="center">
+  <a href="https://github.com/sigapafalah">
+    <img src="https://github.com/sigapafalah.png" width="120" style="border-radius:50%">
+    <br><sub><b>Sigap Abror Falah</b></sub>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Lenipamularsih">
+    <img src="https://github.com/Lenipamularsih.png" width="120" style="border-radius:50%">
+    <br><sub><b>Leni Pamularsih</b></sub>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/wiliasondriva">
+    <img src="https://github.com/wiliasondriva.png" width="120" style="border-radius:50%">
+    <br><sub><b>Wilia Sondriva</b></sub>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/lilikavitaa">
+    <img src="https://github.com/lilikavitaa.png" width="120" style="border-radius:50%">
+    <br><sub><b>Lilik Avitadia Prichanti</b></sub>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/aridhapebriani">
+    <img src="https://github.com/aridhapebriani.png" width="120" style="border-radius:50%">
+    <br><sub><b>Aridha Pebriani Kusmiran</b></sub>
+  </a>
+</p>
