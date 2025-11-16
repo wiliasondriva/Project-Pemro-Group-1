@@ -2,7 +2,9 @@
   <img src="results/figures/Logo_IPB.png" width="200">
 </p>
 
-# Analisis Tingkat Kriminalitas di Provinsi Jawa Barat Tahun 2024
+# Analisis Faktor Sosial Ekonomi terhadap Tingkat Kriminalitas di Jawa Barat Tahun 2024 Menggunakan Regresi Binomial Negatif
+Proyek ini adalah tugas akhir mata kuliah Pemrograman Statistika (STA2511) yang menganalisis data kriminalitas di 24 wilayah hukum (Polres/Polresta/Polrestabes) di Jawa Barat dan hubungannya dengan faktor-faktor sosial ekonomi.
+Karena data kriminalitas (data cacahan) terbukti mengalami **overdispersi**, proyek ini menggunakan **Regresi Binomial Negatif** sebagai model analisis utama.
 
 ## Struktur Folder
 - `data/raw/` : data mentah (tidak diubah manual)
@@ -11,6 +13,27 @@
 - `results/figures/` : visualisasi model dan error
 - `results/tables/` : ringkasan metrik evaluasi (RMSE, MAE)
 - `docs/` : catatan analisis / draft laporan
+
+## 🎯 Relevansi dengan Materi Pemrograman Statistika
+
+Proyek ini dirancang untuk memenuhi capaian pembelajaran mata kuliah, terutama pada tiga pilar utama sesuai panduan tugas PDF:
+
+1.  `📁` **Teknik Munging/Wrangling (Pertemuan 3)**
+    * Kami menggabungkan dua sumber data (Data Pidana & Data Sosek BPS).
+    * Melakukan **agregasi** untuk menangani wilayah gabungan (misal: Kab. Bandung Barat & Kota Cimahi yang diwakili oleh **Polres Cimahi**) menggunakan `group_by()` dan `summarise()`.
+    * *Hasil Akhir:* `data_final_bersih.xlsx`
+    * *Laporan Lengkap:* `outputs/html/DataWranglingKelompok1.html`
+
+2.  `🗺️` **Pemrograman Grafik (Pertemuan 4)**
+    * Membuat visualisasi eksploratif (histogram, boxplot, scatter plot) menggunakan `ggplot2` untuk memahami distribusi data.
+    * Membuat **visualisasi peta koroplet (choropleth map)** menggunakan paket `sf` dan `ggplot2` untuk memetakan sebaran geografis kriminalitas, sekaligus menangani pemetaan dari 27 Kab/Kota ke 24 Wilayah Hukum Polres.
+    * *Laporan Lengkap:* `outputs/html/VisualisasiDataKelompok1.html`
+
+3.  `📈` **Komputasi Regresi (Pertemuan 11)**
+    * Menganalisis data respon (Jumlah Kejahatan) yang merupakan **data cacahan (count data)**.
+    * Mengidentifikasi adanya **overdispersi** (varians > mean) pada data respon.
+    * Membandingkan dua model: `glm()` (Regresi Poisson) dan `glm.nb()` (Regresi Binomial Negatif) untuk menemukan model yang paling sesuai.
+    * *Laporan Lengkap:* `outputs/html/projek-github-pemro.html`
 
 ## 1. Latar Belakang
 Penelitian ini ...
@@ -67,6 +90,12 @@ Penelitian ini ...
 <p align="center">
   <img src="results/figures/Peta Kriminalitas.png" width="1000">
 </p>
+
+## 🏁 Kesimpulan
+
+1.  Data kriminalitas di Jawa Barat (level Polres) menunjukkan karakteristik **data cacahan yang mengalami overdispersi kuat**, sehingga tidak dapat dianalisis dengan regresi linear biasa atau Regresi Poisson.
+2.  Visualisasi peta menunjukkan bahwa tingkat kriminalitas cenderung lebih tinggi di wilayah urban dan sub urban yang padat penduduk (sekitar Jakarta dan Bandung Raya).
+3.  Model **Regresi Binomial Negatif** terbukti sebagai model yang paling robust dan akurat secara statistik (AIC terendah) untuk menjelaskan hubungan antara faktor sosial ekonomi dan tingkat kriminalitas di Jawa Barat.
 
 ## 👥 Team Members
 <table align="center">
