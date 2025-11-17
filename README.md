@@ -6,6 +6,8 @@
 Proyek ini adalah tugas akhir mata kuliah Pemrograman Statistika (STA2511) yang menganalisis data kriminalitas di 24 wilayah hukum (Polres/Polresta/Polrestabes) di Jawa Barat dan hubungannya dengan faktor-faktor sosial ekonomi.
 Karena data kriminalitas (data cacahan) terbukti mengalami **overdispersi**, proyek ini menggunakan **Regresi Binomial Negatif** sebagai model analisis utama.
 
+---
+
 ## Struktur Folder
 - `data/raw/` : data mentah (tidak diubah manual)
 - `data/processed/` : data setelah dibersihkan (missing value, transformasi)
@@ -13,6 +15,8 @@ Karena data kriminalitas (data cacahan) terbukti mengalami **overdispersi**, pro
 - `results/figures/` : visualisasi model dan error
 - `results/tables/` : ringkasan metrik evaluasi (RMSE, MAE)
 - `docs/` : catatan analisis / draft laporan
+
+---
 
 ## 🎯 Relevansi dengan Materi Pemrograman Statistika
 
@@ -35,27 +39,34 @@ Proyek ini dirancang untuk memenuhi capaian pembelajaran mata kuliah, terutama p
     * Membandingkan dua model: `glm()` (Regresi Poisson) dan `glm.nb()` (Regresi Binomial Negatif) untuk menemukan model yang paling sesuai.
     * *Laporan Lengkap:* `outputs/html/projek-github-pemro.html`
 
-## 1. Latar Belakang
+---
+
+## 📚 Latar Belakang
 Penelitian ini ...
 
-## 2. Tujuan Penelitian
+---
 
+## 📌 Tujuan Penelitian
 
-## 3. Data dan Variabel
+---
+
+## 📁 Data dan Variabel
+
 <p align="center">
-  <img src="results/figures/Logo_bps.png" width="200" style="margin-right: 20px;">
-  <img src="results/figures/Logo Dinas Pendidikan Jawa Barat.png" width="200">
+  <img src="results/figures/Logo_bps.png" width="140">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="results/figures/Logo Dinas Pendidikan Jawa Barat.png" width="140">
 </p>
 
 ### Variabel Penjelas (X)
-- Upah Minimum Kabupaten
-- Kepadatan Penduduk
-- Produk Domestik Regional Bruto (PDRB)
-- Tingkat Pengangguran Terbuka
-- Jumlah Putus Sekolah
+- 📍 Upah Minimum Kabupaten  
+- 👥 Kepadatan Penduduk  
+- 📊 Produk Domestik Regional Bruto (PDRB)  
+- 🏃‍♂️ Tingkat Pengangguran Terbuka  
+- 🏫 Jumlah Putus Sekolah
 
 ### Variabel Respon (Y)
-- Jumlah Kejahatan yang dilaporkan
+- 🚨 Jumlah Kejahatan yang dilaporkan
 
 ### Dataset
 | No | Satuan Wilayah Hukum      | Jumlah Kejahatan | Upah Minimum Kab. | Kepadatan Penduduk |  PDRB  | T. Pengangguran Terbuka | Putus Sekolah |
@@ -73,10 +84,13 @@ Penelitian ini ...
   <img src="results/figures/scatterplot.png" width="800">
 </p>
 
-## 3. Metodologi
+---
 
+## 🛠️ Metodologi
 
-## 4. Tahapan analisis
+---
+
+## 🧩 Tahapan analisis
 1. Mengumpulkan data dari berbagai pangkalan data.
 2. Melakukan eksplorasi data dengan mendeskripsikan data yang diperoleh.
 3. Menguji sebaran pada peubah respon, apakah benar memiliki sebaran poisson atau tidak.
@@ -85,17 +99,23 @@ Penelitian ini ...
 6. Menentukan model regresi binomial negatif.
 7. Menghitung nilai AIC untuk memilih model terbaik
 
-## 5. Visualisasi
+---
+
+## 🖼️ Visualisasi
 ### Peta Kriminalitas Jawa Barat
 <p align="center">
   <img src="results/figures/Peta Kriminalitas.png" width="1000">
 </p>
+
+---
 
 ## 🏁 Kesimpulan
 
 1.  Data kriminalitas di Jawa Barat (level Polres) menunjukkan karakteristik **data cacahan yang mengalami overdispersi kuat**, sehingga tidak dapat dianalisis dengan regresi linear biasa atau Regresi Poisson.
 2.  Visualisasi peta menunjukkan bahwa tingkat kriminalitas cenderung lebih tinggi di wilayah urban dan sub urban yang padat penduduk (sekitar Jakarta dan Bandung Raya).
 3.  Model **Regresi Binomial Negatif** terbukti sebagai model yang paling robust dan akurat secara statistik (AIC terendah) untuk menjelaskan hubungan antara faktor sosial ekonomi dan tingkat kriminalitas di Jawa Barat.
+
+---
 
 ## 👥 Team Members
 <table align="center">
@@ -132,4 +152,5 @@ Penelitian ini ...
     </td>
   </tr>
 </table>
+
 ---
