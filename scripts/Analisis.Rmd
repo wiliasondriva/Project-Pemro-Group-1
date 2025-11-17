@@ -1,0 +1,115 @@
+---
+title: "Projek Github Pemro"
+author: "Sigap Abror Falah"
+date: "2025-11-17"
+output: html_document
+---
+
+# 1. Instalasi & Pemanggilan Paket
+
+```{r}
+packages <- c("tidyverse", "readxl", "MASS", "AER", "pscl", "GGally")
+install.packages(setdiff(packages, rownames(installed.packages())))
+
+library(tidyverse)
+library(readxl)
+library(MASS)
+library(AER)
+library(pscl)
+library(GGally)
+library(ggplot2)
+```
+
+# 2. Eksplorasi Data
+
+```{r}
+#import Data
+df <- read_excel("data_final_bersih.xlsx")
+
+# Cek struktur dan ringkasan
+str(df)
+summary(df)
+num_df <- df[sapply(df, is.numeric)]
+
+# Scatterplot matrix antar variabel numerik
+pairs(num_df, main = "Eksplorasi Awal Antar Variabel")
+
+# Versi lebih informatif (dari GGally)
+ggpairs(num_df)
+```
+
+# 3. Uji Sebaran Poisson pada Peubah Respon
+
+```{r}
+# Peubah respon: Jumlah Kejahatan yang Dilaporkan
+Y <- df$`Jumlah Kejahatan yang Dilaporkan`
+
+mean_Y <- mean(Y)
+var_Y  <- var(Y)
+
+cat("Mean =", mean_Y, "Var =", var_Y, "\n")
+
+if (var_Y > mean_Y) {
+  cat("Data cenderung overdispersi, model Poisson mungkin kurang tepat.\n")
+} else {
+  cat("Data mungkin sesuai dengan sebaran Poisson.\n")
+}
+```
+
+# 4. Model Regresi Poisson
+
+```{r}
+# Model regresi Poisson
+model_pois <- glm(
+  `Jumlah Kejahatan yang Dilaporkan` ~ besaran_upah_minimum + kepadatan_penduduk +
+    `Produk Domestik Regional Bruto per Kapita Atas Dasar Harga Berlaku (Ribu Rp)` +
+    tingkat_pengangguran_terbuka + putus_sekolah,
+  data = df,
+  family = poisson
+)
+
+summary(model_pois)
+```
+
+# 5. Identifikasi Overdispersi
+
+```{r}
+deviance_ratio <- model_pois$deviance / model_pois$df.residual
+cat("Nilai koefisien disperse =", deviance_ratio, "\n")
+
+if (deviance_ratio > 1.5) {
+  cat("Indikasi overdispersi terdeteksi.\n")
+} else {
+  cat("Tidak ada indikasi overdispersi.\n")
+}
+```
+
+# 6. Model Regresi Binomial Negatif
+
+```{r}
+model_nb <- glm.nb(
+  `Jumlah Kejahatan yang Dilaporkan` ~ besaran_upah_minimum + kepadatan_penduduk +
+    `Produk Domestik Regional Bruto per Kapita Atas Dasar Harga Berlaku (Ribu Rp)` +
+    tingkat_pengangguran_terbuka + putus_sekolah,
+  data = df
+)
+
+summary(model_nb)
+```
+
+# 7. Seleksi Model Terbaik dengan AIC
+
+```{r}
+AIC_pois <- AIC(model_pois)
+AIC_nb   <- AIC(model_nb)
+
+hasil <- data.frame(
+  Model = c("Poisson", "NegBinom"),
+  AIC   = c(AIC_pois, AIC_nb)
+)
+
+print(hasil)
+
+cat("Model terbaik berdasarkan AIC adalah:",
+    hasil$Model[which.min(hasil$AIC)], "\n")
+```
