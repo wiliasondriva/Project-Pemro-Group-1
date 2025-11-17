@@ -42,11 +42,19 @@ Proyek ini dirancang untuk memenuhi capaian pembelajaran mata kuliah, terutama p
 ---
 
 ## 📚 Latar Belakang
-Penelitian ini ...
+Kriminalitas di Jawa Barat pada tahun 2024 menunjukkan variasi yang cukup tinggi di antara 24 wilayah hukum. Perbedaan tingkat kejahatan ini diduga dipengaruhi oleh kondisi sosial ekonomi masyarakat, seperti pendapatan, kepadatan penduduk, pengangguran, serta angka putus sekolah. Faktor-faktor tersebut sering dikaitkan dengan tekanan ekonomi dan sosial yang dapat meningkatkan risiko kejahatan.
+
+Data kriminalitas yang digunakan merupakan data cacahan (count data). Hasil eksplorasi awal menunjukkan adanya overdispersi, sehingga model regresi Poisson tidak lagi sesuai. Untuk itu, Regresi Binomial Negatif dipilih karena mampu menangani varians data yang lebih besar daripada mean sehingga memberikan estimasi yang lebih akurat.
+
+Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terhadap tingkat kriminalitas dan menentukan model terbaik dalam menjelaskan variasi tersebut.
 
 ---
 
 ## 📌 Tujuan Penelitian
+- Menganalisis pengaruh faktor sosial ekonomi—seperti upah minimum, kepadatan penduduk, PDRB, tingkat pengangguran terbuka, dan jumlah putus sekolah—terhadap tingkat kriminalitas di 24 wilayah hukum di Jawa Barat pada tahun 2024.
+- Mengidentifikasi apakah terjadi overdispersi pada data jumlah kejahatan yang dilaporkan sehingga model regresi Poisson kurang sesuai digunakan.
+- Membangun model Regresi Binomial Negatif sebagai pendekatan yang tepat untuk data kriminalitas yang mengalami overdispersi.
+- Membandingkan kualitas model melalui nilai AIC untuk menentukan model terbaik dalam memprediksi jumlah kejahatan berdasarkan variabel sosial ekonomi.
 
 ---
 
