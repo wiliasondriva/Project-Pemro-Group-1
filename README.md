@@ -108,6 +108,65 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
 7. Menghitung nilai AIC untuk memilih model terbaik
 
 ---
+## 🔬 Alur Analisis dan Temuan Utama
+
+Proyek ini dibagi menjadi tiga tahap utama yang saling berurutan:
+
+`Data Mentah` → `Tahap 1: Data Wrangling` → `Tahap 2: Analisis & Visualisasi (EDA)` → `Tahap 3: Pemodelan Regresi` → `Kesimpulan`
+
+### Tahap 1: Persiapan Data (Wrangling)
+
+Data kriminalitas (level Polres) dan data sosial ekonomi (level Kab/Kota) tidak dapat langsung digabung. Kami melakukan proses *wrangling* untuk menyatukan 27 wilayah administrasi Kab/Kota ke dalam 24 wilayah hukum Polres yang sesuai.
+
+**Contoh Kasus:** Data Sosial ekonomi untuk "Kab. Bandung Barat" dan "Kota Cimahi" diagregasi (dirata-rata) untuk mencerminkan satu entitas wilayah hukum, yaitu "Polres Cimahi".
+
+### Tahap 2: Analisis Eksploratif (EDA) & Visualisasi Peta
+
+Sebelum memodelkan, kami melakukan EDA untuk memahami karakteristik data.
+
+#### Temuan Kunci 1: Distribusi Data Sangat Miring (Right-Skewed)
+
+Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memiliki tingkat kejahatan yang relatif rendah, namun ada beberapa wilayah (seperti Polres Bogor dan Polrestabes Bandung) dengan tingkat kejahatan yang sangat tinggi.
+
+*(Sematkan gambar Histogram dari file VisualisasiDataKelompok1.html di sini)*
+`![Histogram Jumlah Kejahatan](outputs/plots/nama_file_histogram.png)`
+
+#### Temuan Kunci 2: Visualisasi Peta Sebaran Kriminalitas
+
+Peta koroplet menunjukkan sebaran geografis kriminalitas. Wilayah dengan warna yang lebih terang (kuning) menunjukkan jumlah laporan kejahatan yang lebih tinggi. Terlihat bahwa wilayah yang berdekatan dengan Jakarta (Bogor, Depok, Bekasi) dan wilayah metropolitan Bandung Raya memiliki tingkat kriminalitas yang lebih tinggi.
+
+*(INI ADALAH VISUAL UTAMA ANDA. Sematkan gambar Peta .png yang sudah di-render di sini)*
+`![Peta Kriminalitas Jabar](outputs/plots/peta_sebaran_kriminalitas_jabar.png)`
+
+### Tahap 3: Pemodelan Regresi (Mengapa Binomial Negatif?)
+
+Tujuan kami adalah memodelkan "Jumlah Kejahatan" (Variabel Y) menggunakan faktor sosek (Variabel X).
+
+#### Temuan Kunci 3: Terdeteksi Overdispersi Kuat
+
+Langkah pertama dalam pemodelan data cacahan adalah memeriksa rasio varians terhadap mean.
+* **Mean (Rata-rata)** Jumlah Kejahatan: `2219.04`
+* **Varian** Jumlah Kejahatan: `1114839.95`
+
+**Varian (1.1 Juta) jauh lebih besar daripada Mean (2 Ribu)**.
+
+Ini disebut **Overdispersi**. Hal ini melanggar asumsi dasar Regresi Poisson (dimana Mean ≈ Varian) dan membuktikan bahwa **model Poisson PASTI tidak akan cocok** untuk data ini.
+
+#### Temuan Kunci 4: Perbandingan Model (AIC)
+
+Kami membandingkan dua model untuk mengatasi ini:
+1.  **Regresi Poisson:** Model standar untuk data cacahan (asumsi Mean=Varian).
+2.  **Regresi Binomial Negatif:** Model yang lebih fleksibel, dirancang khusus untuk menangani overdispersi.
+
+Kami menggunakan **Akaike Information Criterion (AIC)** untuk membandingkan model. Semakin kecil nilai AIC, semakin baik modelnya.
+
+| Model | Nilai AIC | Keterangan |
+| :--- | :--- | :--- |
+| Regresi Poisson (`glm`) | 6074.49 | Sangat buruk (karena overdispersi) |
+| **Regresi Binomial Negatif (`glm.nb`)** | **373.09** | **JAUH LEBIH BAIK / Model Pemenang** |
+
+**Hasil:** Nilai AIC Regresi Binomial Negatif (373.09) secara drastis lebih rendah daripada Poisson (6074.49). Ini secara statistik mengkonfirmasi bahwa **Regresi Binomial Negatif adalah model yang paling tepat dan valid** untuk menganalisis data kriminalitas Jawa Barat.
+---
 
 ## 🖼️ Visualisasi
 ### Peta Kriminalitas Jawa Barat
