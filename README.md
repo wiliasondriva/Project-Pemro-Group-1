@@ -18,29 +18,6 @@ Karena data kriminalitas (data cacahan) terbukti mengalami **overdispersi**, pro
 
 ---
 
-## 🎯 Relevansi dengan Materi Pemrograman Statistika
-
-Proyek ini dirancang untuk memenuhi capaian pembelajaran mata kuliah, terutama pada tiga pilar utama sesuai panduan tugas PDF:
-
-1.  `📁` **Teknik Munging/Wrangling (Pertemuan 3)**
-    * Kami menggabungkan dua sumber data (Data Pidana & Data Sosek BPS).
-    * Melakukan **agregasi** untuk menangani wilayah gabungan (misal: Kab. Bandung Barat & Kota Cimahi yang diwakili oleh **Polres Cimahi**) menggunakan `group_by()` dan `summarise()`.
-    * *Hasil Akhir:* `data_final_bersih.xlsx`
-    * *Laporan Lengkap:* `outputs/html/DataWranglingKelompok1.html`
-
-2.  `🗺️` **Pemrograman Grafik (Pertemuan 4)**
-    * Membuat visualisasi eksploratif (histogram, boxplot, scatter plot) menggunakan `ggplot2` untuk memahami distribusi data.
-    * Membuat **visualisasi peta koroplet (choropleth map)** menggunakan paket `sf` dan `ggplot2` untuk memetakan sebaran geografis kriminalitas, sekaligus menangani pemetaan dari 27 Kab/Kota ke 24 Wilayah Hukum Polres.
-    * *Laporan Lengkap:* `outputs/html/VisualisasiDataKelompok1.html`
-
-3.  `📈` **Komputasi Regresi (Pertemuan 11)**
-    * Menganalisis data respon (Jumlah Kejahatan) yang merupakan **data cacahan (count data)**.
-    * Mengidentifikasi adanya **overdispersi** (varians > mean) pada data respon.
-    * Membandingkan dua model: `glm()` (Regresi Poisson) dan `glm.nb()` (Regresi Binomial Negatif) untuk menemukan model yang paling sesuai.
-    * *Laporan Lengkap:* `outputs/html/projek-github-pemro.html`
-
----
-
 ## 📚 Latar Belakang
 Kriminalitas di Jawa Barat pada tahun 2024 menunjukkan variasi yang cukup tinggi di antara 24 wilayah hukum. Perbedaan tingkat kejahatan ini diduga dipengaruhi oleh kondisi sosial ekonomi masyarakat, seperti pendapatan, kepadatan penduduk, pengangguran, serta angka putus sekolah. Faktor-faktor tersebut sering dikaitkan dengan tekanan ekonomi dan sosial yang dapat meningkatkan risiko kejahatan.
 
@@ -92,6 +69,7 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
   <img src="results/figures/scatterplot.png" width="800">
 </p>
 
+[tambahkan penjelasan]
 ---
 
 ## 🛠️ Metodologi
