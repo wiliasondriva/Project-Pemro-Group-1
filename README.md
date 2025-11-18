@@ -128,19 +128,19 @@ Sebelum memodelkan, kami melakukan EDA untuk memahami karakteristik data.
 
 Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memiliki tingkat kejahatan yang relatif rendah, namun ada beberapa wilayah (seperti Polres Bogor dan Polrestabes Bandung) dengan tingkat kejahatan yang sangat tinggi.
 
-*(Sematkan gambar Histogram dari file VisualisasiDataKelompok1.html di sini)*
 `![Histogram Jumlah Kejahatan](outputs/plots/nama_file_histogram.png)`
 
 #### Temuan Kunci 2: Visualisasi Peta Sebaran Kriminalitas
 
-Peta koroplet menunjukkan sebaran geografis kriminalitas. Wilayah dengan warna yang lebih terang (kuning) menunjukkan jumlah laporan kejahatan yang lebih tinggi. Terlihat bahwa wilayah yang berdekatan dengan Jakarta (Bogor, Depok, Bekasi) dan wilayah metropolitan Bandung Raya memiliki tingkat kriminalitas yang lebih tinggi.
+Wilayah dengan warna yang lebih terang (kuning) menunjukkan jumlah laporan kejahatan yang lebih tinggi. Terlihat bahwa wilayah yang berdekatan dengan Jakarta (Bogor, Depok, Bekasi) dan wilayah metropolitan Bandung Raya memiliki tingkat kriminalitas yang lebih tinggi.
 
-*(INI ADALAH VISUAL UTAMA ANDA. Sematkan gambar Peta .png yang sudah di-render di sini)*
-`![Peta Kriminalitas Jabar](outputs/plots/peta_sebaran_kriminalitas_jabar.png)`
+<p align="center">
+  <img src="results/figures/Peta Kriminalitas.png" width="1000">
+</p>
 
 ### Tahap 3: Pemodelan Regresi (Mengapa Binomial Negatif?)
 
-Tujuan kami adalah memodelkan "Jumlah Kejahatan" (Variabel Y) menggunakan faktor sosek (Variabel X).
+Tujuan kami adalah memodelkan "Jumlah Kejahatan" (Variabel Y) menggunakan faktor sosial ekonomi (Variabel X).
 
 #### Temuan Kunci 3: Terdeteksi Overdispersi Kuat
 
@@ -150,7 +150,7 @@ Langkah pertama dalam pemodelan data cacahan adalah memeriksa rasio varians terh
 
 **Varian (1.1 Juta) jauh lebih besar daripada Mean (2 Ribu)**.
 
-Ini disebut **Overdispersi**. Hal ini melanggar asumsi dasar Regresi Poisson (dimana Mean ≈ Varian) dan membuktikan bahwa **model Poisson PASTI tidak akan cocok** untuk data ini.
+Ini disebut **Overdispersi**. Hal ini melanggar asumsi dasar Regresi Poisson (dimana Mean ≈ Varian) dan membuktikan bahwa **model Poisson tidak akan cocok** untuk data ini.
 
 #### Temuan Kunci 4: Perbandingan Model (AIC)
 
@@ -158,22 +158,12 @@ Kami membandingkan dua model untuk mengatasi ini:
 1.  **Regresi Poisson:** Model standar untuk data cacahan (asumsi Mean=Varian).
 2.  **Regresi Binomial Negatif:** Model yang lebih fleksibel, dirancang khusus untuk menangani overdispersi.
 
-Kami menggunakan **Akaike Information Criterion (AIC)** untuk membandingkan model. Semakin kecil nilai AIC, semakin baik modelnya.
-
 | Model | Nilai AIC | Keterangan |
 | :--- | :--- | :--- |
 | Regresi Poisson (`glm`) | 6074.49 | Sangat buruk (karena overdispersi) |
-| **Regresi Binomial Negatif (`glm.nb`)** | **373.09** | **JAUH LEBIH BAIK / Model Pemenang** |
+| **Regresi Binomial Negatif (`glm.nb`)** | **373.09** | **JAUH LEBIH BAIK** |
 
 **Hasil:** Nilai AIC Regresi Binomial Negatif (373.09) secara drastis lebih rendah daripada Poisson (6074.49). Ini secara statistik mengkonfirmasi bahwa **Regresi Binomial Negatif adalah model yang paling tepat dan valid** untuk menganalisis data kriminalitas Jawa Barat.
----
-
-## 🖼️ Visualisasi
-### Peta Kriminalitas Jawa Barat
-<p align="center">
-  <img src="results/figures/Peta Kriminalitas.png" width="1000">
-</p>
-
 ---
 
 ## 🏁 Kesimpulan
