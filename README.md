@@ -107,7 +107,7 @@ Sebelum memodelkan, kami melakukan EDA untuk memahami karakteristik data.
 Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memiliki tingkat kejahatan yang relatif rendah, namun ada beberapa wilayah (seperti Polres Bogor dan Polrestabes Bandung) dengan tingkat kejahatan yang sangat tinggi.
 
 <p align="center">
-  <img src="results/figures/Histogram Jumlah Kejahatan.png" width="1000">
+  <img src="results/figures/Histogram Jumlah Kejahatan.png" width="800">
 </p>
 
 #### Temuan Kunci 2: Visualisasi Peta Sebaran Kriminalitas
@@ -115,7 +115,7 @@ Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memili
 Wilayah dengan warna yang lebih terang (kuning) menunjukkan jumlah laporan kejahatan yang lebih tinggi. Terlihat bahwa wilayah yang berdekatan dengan Jakarta (Bogor, Depok, Bekasi) dan wilayah metropolitan Bandung Raya memiliki tingkat kriminalitas yang lebih tinggi.
 
 <p align="center">
-  <img src="results/figures/Peta Kriminalitas.png" width="1000">
+  <img src="results/figures/Peta Kriminalitas.png" width="800">
 </p>
 
 ### Tahap 3: Pemodelan Regresi (Mengapa Binomial Negatif?)
