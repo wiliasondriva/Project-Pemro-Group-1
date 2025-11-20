@@ -69,6 +69,12 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
   <img src="results/figures/scatterplot.png" width="800">
 </p>
 
+Pola hubungan sebagian besar positif, yang menunjukkan bahwa kriminalitas banyak terkait dengan kondisi sosial ekonomi perkotaan (UMR tinggi, PDRB tinggi, pengangguran tinggi). Variabel dengan pola paling kuat meningkat (positif):
+- PDRB per kapita
+- Upah minimum
+- Pengangguran terbuka
+- Putus sekolah
+
 [tambahkan penjelasan]
 ---
 
@@ -109,12 +115,6 @@ Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memili
 <p align="center">
   <img src="results/figures/Histogram Jumlah Kejahatan.png" width="800">
 </p>
-
-Pola hubungan sebagian besar positif, yang menunjukkan bahwa kriminalitas banyak terkait dengan kondisi sosial ekonomi perkotaan (UMR tinggi, PDRB tinggi, pengangguran tinggi). Variabel dengan pola paling kuat meningkat (positif):
-- PDRB per kapita
-- Upah minimum
-- Pengangguran terbuka
-- Putus sekolah
 
 #### Temuan Kunci 2: Visualisasi Peta Sebaran Kriminalitas
 
