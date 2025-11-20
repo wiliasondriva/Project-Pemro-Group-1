@@ -106,7 +106,9 @@ Sebelum memodelkan, kami melakukan EDA untuk memahami karakteristik data.
 
 Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memiliki tingkat kejahatan yang relatif rendah, namun ada beberapa wilayah (seperti Polres Bogor dan Polrestabes Bandung) dengan tingkat kejahatan yang sangat tinggi.
 
-`![Histogram Jumlah Kejahatan](outputs/plots/nama_file_histogram.png)`
+<p align="center">
+  <img src="results/figures/Histogram Jumlah Kejahatan.png" width="1000">
+</p>
 
 #### Temuan Kunci 2: Visualisasi Peta Sebaran Kriminalitas
 
