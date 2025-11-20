@@ -110,6 +110,12 @@ Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memili
   <img src="results/figures/Histogram Jumlah Kejahatan.png" width="800">
 </p>
 
+Pola hubungan sebagian besar positif, yang menunjukkan bahwa kriminalitas banyak terkait dengan kondisi sosial ekonomi perkotaan (UMR tinggi, PDRB tinggi, pengangguran tinggi). Variabel dengan pola paling kuat meningkat (positif):
+- PDRB per kapita
+- Upah minimum
+- Pengangguran terbuka
+- Putus sekolah
+
 #### Temuan Kunci 2: Visualisasi Peta Sebaran Kriminalitas
 
 Wilayah dengan warna yang lebih terang (kuning) menunjukkan jumlah laporan kejahatan yang lebih tinggi. Terlihat bahwa wilayah yang berdekatan dengan Jakarta (Bogor, Depok, Bekasi) dan wilayah metropolitan Bandung Raya memiliki tingkat kriminalitas yang lebih tinggi.
