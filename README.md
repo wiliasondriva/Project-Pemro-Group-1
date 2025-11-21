@@ -1,4 +1,11 @@
-<img width="77" height="21" alt="image" src="https://github.com/user-attachments/assets/a7fe4720-4787-486e-b96b-4f5e069313d3" /><p align="center">
+
+<img width="3125" height="900" alt="Blue Yellow Modern Business Email Header (1200 x 200 px) (1200 x 100 px) (1000 x 300 px)" src="https://github.com/user-attachments/assets/90266b14-24f9-4509-a811-4cca029a550c" />
+
+<br>
+<br>
+<br>
+
+ <p align="center">
   <img src="results/figures/Logo_IPB.png" width="200">
 </p>
 
