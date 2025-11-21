@@ -1,27 +1,14 @@
+# 🚔 Analisis Faktor Sosial Ekonomi terhadap Tingkat Kriminalitas di Jawa Barat Tahun 2024 Menggunakan Regresi Binomial Negatif
+
+---
 
 <img width="3125" height="900" alt="Blue Yellow Modern Business Email Header (1200 x 200 px) (1200 x 100 px) (1000 x 300 px)" src="https://github.com/user-attachments/assets/90266b14-24f9-4509-a811-4cca029a550c" />
 
 <br>
 <br>
-<br>
 
- <p align="center">
-  <img src="results/figures/Logo_IPB.png" width="200">
-</p>
-
-# Analisis Faktor Sosial Ekonomi terhadap Tingkat Kriminalitas di Jawa Barat Tahun 2024 Menggunakan Regresi Binomial Negatif
 Proyek ini adalah tugas akhir mata kuliah Pemrograman Statistika (STA2511) yang menganalisis data kriminalitas di 24 wilayah hukum (Polres/Polresta/Polrestabes) di Jawa Barat dan hubungannya dengan faktor-faktor sosial ekonomi.
 Karena data kriminalitas (data cacahan) terbukti mengalami **overdispersi**, proyek ini menggunakan **Regresi Binomial Negatif** sebagai model analisis utama.
-
----
-
-## Struktur Folder
-- `data/raw/` : data mentah (tidak diubah manual)
-- `data/processed/` : data setelah dibersihkan (missing value, transformasi)
-- `scripts/` : kode R untuk import data, fitting model, evaluasi
-- `results/figures/` : visualisasi model dan error
-- `results/tables/` : ringkasan metrik evaluasi (RMSE, MAE)
-- `docs/` : catatan analisis / draft laporan
 
 ---
 
@@ -51,7 +38,7 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
 </p>
 
 ### Variabel Penjelas (X)
-- 📍 Upah Minimum Kabupaten  
+- 💵 Upah Minimum Kabupaten  
 - 👥 Kepadatan Penduduk  
 - 📊 Produk Domestik Regional Bruto (PDRB)  
 - 🏃‍♂️ Tingkat Pengangguran Terbuka  
@@ -71,9 +58,12 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
 | 22 | Polresta Cirebon          | 1719             | 2517730           | 2.312              | 28140  | 6.74                    | 3             |
 | 23 | Polrestabes Kota Bandung  | 4036             | 4209309           | 15.557             | 147081 | 7.4                     | 17            |
 
-### Scatterplot Variabel X terhadap Y
+### Eksplorasi Data Awal
+
 <p align="center">
   <img src="results/figures/scatterplot.png" width="800">
+ <br>
+  <i>Gambar 1. Scatterplot</i>
 </p>
 
 Pola hubungan sebagian besar positif, yang menunjukkan bahwa kriminalitas banyak terkait dengan kondisi sosial ekonomi perkotaan (UMR tinggi, PDRB tinggi, pengangguran tinggi). Variabel dengan pola paling kuat meningkat (positif):
@@ -83,9 +73,8 @@ Pola hubungan sebagian besar positif, yang menunjukkan bahwa kriminalitas banyak
 - Putus sekolah
 
 [tambahkan penjelasan]
----
 
-## 🛠️ Metodologi
+#### Heatmap Korelasi
 
 ---
 
