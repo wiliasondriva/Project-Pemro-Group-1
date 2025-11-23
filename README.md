@@ -74,7 +74,11 @@ Pola hubungan sebagian besar positif, yang menunjukkan bahwa kriminalitas banyak
 
 [tambahkan penjelasan]
 
-#### Heatmap Korelasi
+<p align="center">
+  <img src="results/figures/Heatmap.png" width="800">
+  <br>
+   <i>Gambar 2. Heatmap korelasi</i>
+</p>
 
 ---
 
