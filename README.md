@@ -66,13 +66,31 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
   <i>Gambar 1. Scatterplot</i>
 </p>
 
-Pola hubungan sebagian besar positif, yang menunjukkan bahwa kriminalitas banyak terkait dengan kondisi sosial ekonomi perkotaan (UMR tinggi, PDRB tinggi, pengangguran tinggi). Variabel dengan pola paling kuat meningkat (positif):
-- PDRB per kapita
-- Upah minimum
-- Pengangguran terbuka
-- Putus sekolah
+**Interpretasi Pola Korelasi Variabel Sosial Ekonomi dan Kriminalitas**
 
-[tambahkan penjelasan]
+Hasil visualisasi heatmap menunjukkan bahwa hubungan antara sebagian besar variabel sosial ekonomi dan tingkat kriminalitas cenderung positif. Pola ini mengindikasikan bahwa kabupaten/kota dengan kondisi sosial ekonomi tertentu memperlihatkan kecenderungan peningkatan tingkat kejahatan yang searah dengan naiknya nilai variabel-variabel tersebut. Secara lebih terperinci, beberapa poin penting dapat dijelaskan sebagai berikut.
+1. Variabel Ekonomi Makro <br>
+Variabel PDRB per kapita dan besaran upah minimum menunjukkan korelasi positif yang cukup kuat dengan tingkat kriminalitas. Pola ini umum dijumpai pada wilayah perkotaan atau pusat pertumbuhan ekonomi, di mana aktivitas ekonomi yang tinggi diiringi oleh:<br>
+a. Peningkatan arus mobilitas penduduk, barang, dan uang; <br>
+b. Heterogenitas sosial yang lebih besar; serta <br>
+c. Peluang terjadinya kejahatan yang lebih luas (misalnya pencurian, penipuan, atau tindak kriminal yang mengikuti transaksi ekonomi). <br>
+Korelasi ini tidak dapat langsung diinterpretasikan sebagai hubungan sebab-akibat. Namun, hal ini menegaskan bahwa wilayah dengan dinamika ekonomi tinggi cenderung memiliki risiko kriminalitas yang lebih besar akibat kompleksitas interaksi sosial dan tingginya aktivitas ekonomi.
+
+2. Kondisi Pasar Tenaga Kerja <br>
+Variabel tingkat pengangguran terbuka juga memperlihatkan korelasi positif. Secara teoretis, pengangguran mencerminkan tekanan sosial-ekonomi yang dialami individu dalam kelompok usia kerja, sehingga berpotensi meningkatkan: <br>
+a. Kerentanan terhadap stres ekonomi; <br>
+b. Risiko keterlibatan dalam aktivitas ilegal; <br>
+c. Ketimpangan sosial, yang pada gilirannya membuka peluang bagi terjadinya tindak kriminal.<br>
+Dengan demikian, daerah dengan pengangguran terbuka yang tinggi umumnya memiliki tingkat kriminalitas yang lebih besar.
+
+3. Faktor Pendidikan <br>
+Variabel putus sekolah menunjukkan korelasi positif terhadap kriminalitas. Fenomena ini sejalan dengan literatur yang menyebutkan bahwa tingkat pendidikan yang rendah berkaitan dengan: <br>
+a. Terbatasnya keterampilan kerja; <br>
+b. Rendahnya daya saing di pasar tenaga kerja; <br>
+c. Paparan terhadap lingkungan sosial yang berisiko; serta <br>
+d. Minimnya pengetahuan mengenai konsekuensi hukum. <br>
+Akibatnya, kelompok dengan tingkat pendidikan rendah lebih rentan terhadap dinamika sosial-ekonomi yang dapat mendorong keterlibatan dalam tindak kriminal.
+
 
 <p align="center">
   <img src="results/figures/Heatmap.png" width="800">
