@@ -63,7 +63,7 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
 <p align="center">
   <img src="results/figures/Heatmap.png" width="800">
   <br>
-   <i>Gambar 2. Heatmap korelasi</i>
+   <i>Gambar 1. Heatmap korelasi</i>
 </p>
 
 **Interpretasi Pola Korelasi Variabel Sosial Ekonomi dan Kriminalitas**
@@ -126,14 +126,16 @@ Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memili
 
 <p align="center">
   <img src="results/figures/Histogram Jumlah Kejahatan.png" width="800">
+  <i>Gambar 2. Distribusi Jumlah Kriminalitas</i>
 </p>
 
 #### Temuan Kunci 2: Visualisasi Peta Sebaran Kriminalitas
 
-Wilayah dengan warna yang lebih terang (kuning) menunjukkan jumlah laporan kejahatan yang lebih tinggi. Terlihat bahwa wilayah yang berdekatan dengan Jakarta (Bogor, Depok, Bekasi) dan wilayah metropolitan Bandung Raya memiliki tingkat kriminalitas yang lebih tinggi.
+Wilayah dengan warna yang lebih gelap (merah) menunjukkan jumlah laporan kejahatan yang lebih tinggi. Terlihat bahwa wilayah yang berdekatan dengan Jakarta (Bogor, Depok, Bekasi) dan wilayah metropolitan Bandung Raya memiliki tingkat kriminalitas yang lebih tinggi.
 
 <p align="center">
   <img src="results/figures/Peta Kriminalitas.png" width="800">
+  <i>Gambar 3. Peta Sebaran Kriminalitas</i>
 </p>
 
 ### Tahap 3: Pemodelan Regresi (Mengapa Binomial Negatif?)
@@ -159,7 +161,7 @@ Kami membandingkan dua model untuk mengatasi ini:
 | Model | Nilai AIC | Keterangan |
 | :--- | :--- | :--- |
 | Regresi Poisson (`glm`) | 6074.49 | Sangat buruk (karena overdispersi) |
-| **Regresi Binomial Negatif (`glm.nb`)** | **373.09** | **JAUH LEBIH BAIK** |
+| **Regresi Binomial Negatif (`glm.nb`)** | **373.09** | **LEBIH BAIK** |
 
 **Hasil:** Nilai AIC Regresi Binomial Negatif (373.09) secara drastis lebih rendah daripada Poisson (6074.49). Ini secara statistik mengkonfirmasi bahwa **Regresi Binomial Negatif adalah model yang paling tepat dan valid** untuk menganalisis data kriminalitas Jawa Barat.
 ---
