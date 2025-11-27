@@ -61,9 +61,9 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
 ### Eksplorasi Data Awal
 
 <p align="center">
-  <img src="results/figures/scatterplot.png" width="800">
- <br>
-  <i>Gambar 1. Scatterplot</i>
+  <img src="results/figures/Heatmap.png" width="800">
+  <br>
+   <i>Gambar 2. Heatmap korelasi</i>
 </p>
 
 **Interpretasi Pola Korelasi Variabel Sosial Ekonomi dan Kriminalitas**
@@ -91,12 +91,6 @@ c. Paparan terhadap lingkungan sosial yang berisiko; serta <br>
 d. Minimnya pengetahuan mengenai konsekuensi hukum. <br>
 Akibatnya, kelompok dengan tingkat pendidikan rendah lebih rentan terhadap dinamika sosial-ekonomi yang dapat mendorong keterlibatan dalam tindak kriminal.
 
-
-<p align="center">
-  <img src="results/figures/Heatmap.png" width="800">
-  <br>
-   <i>Gambar 2. Heatmap korelasi</i>
-</p>
 
 ---
 
