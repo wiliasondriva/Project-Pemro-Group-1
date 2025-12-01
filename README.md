@@ -99,7 +99,7 @@ Akibatnya, kelompok dengan tingkat pendidikan rendah lebih rentan terhadap dinam
 2. Melakukan eksplorasi data dengan mendeskripsikan data yang diperoleh.
 3. Menguji sebaran pada peubah respon, apakah benar memiliki sebaran poisson atau tidak.
 4. Menentukan model regresi poisson.
-5. Mengidentifikasi overdisprsi dengan mengitung nilai koefisien disperse.
+5. Mengidentifikasi overdispersi dengan mengitung nilai koefisien disperse.
 6. Menentukan model regresi binomial negatif.
 7. Menghitung nilai AIC untuk memilih model terbaik
 
@@ -170,6 +170,14 @@ Kami membandingkan dua model untuk mengatasi ini:
 <p align="center">
   <img src="results/figures/Persamaan Regresi Binomial Negatif.png" width="800">
 </p>
+
+| Variabel                               | Koefisien (β) | Interpretasi (% perubahan pada μ per kenaikan 1 unit)          |
+| -------------------------------------- | ------------- | -------------------------------------------------------------- |
+| **Besaran Upah Minimum**               | 0.0000003     | Hampir **0%**, tidak bermakna → kontribusi nyaris nol          |
+| **Kepadatan Penduduk**                 | 0.00022       | (e^{0.00022}-1 ≈ 0.022%) → naik sangat kecil                   |
+| **PDRB**                               | 0.0000039     | Juga **≈0.00039%** saja → hampir tidak berpengaruh             |
+| **TPT (Tingkat Pengangguran Terbuka)** | 0.1428        | (e^{0.1428}-1 ≈ 15.36%) → **paling kuat mendorong kenaikan μ** |
+| **Putus Sekolah**                      | 0.0124        | (e^{0.0124}-1 ≈ 1.25%) → masih cukup relevan                   |
 
 ---
 
