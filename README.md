@@ -22,7 +22,7 @@ Penelitian ini bertujuan untuk menganalisis pengaruh faktor sosial ekonomi terha
 ---
 
 ## 📌 Tujuan Penelitian
-- Menganalisis pengaruh faktor sosial ekonomi—seperti upah minimum, kepadatan penduduk, PDRB, tingkat pengangguran terbuka, dan jumlah putus sekolah—terhadap tingkat kriminalitas di 24 wilayah hukum di Jawa Barat pada tahun 2024.
+- Menganalisis pengaruh faktor sosial ekonomi—seperti upah minimum, kepadatan penduduk, PDRB, tingkat pengangguran terbuka, dan jumlah putus sekolah—terhadap tingkat kriminalitas di 23 wilayah hukum di Jawa Barat pada tahun 2024.
 - Mengidentifikasi apakah terjadi overdispersi pada data jumlah kejahatan yang dilaporkan sehingga model regresi Poisson kurang sesuai digunakan.
 - Membangun model Regresi Binomial Negatif sebagai pendekatan yang tepat untuk data kriminalitas yang mengalami overdispersi.
 - Membandingkan kualitas model melalui nilai AIC untuk menentukan model terbaik dalam memprediksi jumlah kejahatan berdasarkan variabel sosial ekonomi.
@@ -112,7 +112,7 @@ Proyek ini dibagi menjadi tiga tahap utama yang saling berurutan:
 
 ### Tahap 1: Persiapan Data (Wrangling)
 
-Data kriminalitas (level Polres) dan data sosial ekonomi (level Kab/Kota) tidak dapat langsung digabung. Kami melakukan proses *wrangling* untuk menyatukan 27 wilayah administrasi Kab/Kota ke dalam 24 wilayah hukum Polres yang sesuai.
+Data kriminalitas (level Polres) dan data sosial ekonomi (level Kab/Kota) tidak dapat langsung digabung. Kami melakukan proses *wrangling* untuk menyatukan 27 wilayah administrasi Kab/Kota ke dalam 23 wilayah hukum Polres yang sesuai.
 
 **Contoh Kasus:** Data Sosial ekonomi untuk "Kab. Bandung Barat" dan "Kota Cimahi" diagregasi (dirata-rata) untuk mencerminkan satu entitas wilayah hukum, yaitu "Polres Cimahi".
 
