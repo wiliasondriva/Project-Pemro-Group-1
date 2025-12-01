@@ -7,13 +7,13 @@
 <br>
 <br>
 
-Proyek ini menganalisis data kriminalitas di 24 wilayah hukum (Polres/Polresta/Polrestabes) di Jawa Barat dan hubungannya dengan faktor-faktor sosial ekonomi.
+Proyek ini menganalisis data kriminalitas di 23 wilayah hukum (Polres/Polresta/Polrestabes) di Jawa Barat dan hubungannya dengan faktor-faktor sosial ekonomi.
 Karena data kriminalitas (data cacahan) terbukti mengalami **overdispersi**, proyek ini menggunakan **Regresi Binomial Negatif** sebagai model analisis utama.
 
 ---
 
 ## 📚 Latar Belakang
-Kriminalitas di Jawa Barat pada tahun 2024 menunjukkan variasi yang cukup tinggi di antara 24 wilayah hukum. Perbedaan tingkat kejahatan ini diduga dipengaruhi oleh kondisi sosial ekonomi masyarakat, seperti pendapatan, kepadatan penduduk, pengangguran, serta angka putus sekolah. Faktor-faktor tersebut sering dikaitkan dengan tekanan ekonomi dan sosial yang dapat meningkatkan risiko kejahatan.
+Kriminalitas di Jawa Barat pada tahun 2024 menunjukkan variasi yang cukup tinggi di antara 23 wilayah hukum. Perbedaan tingkat kejahatan ini diduga dipengaruhi oleh kondisi sosial ekonomi masyarakat, seperti pendapatan, kepadatan penduduk, pengangguran, serta angka putus sekolah. Faktor-faktor tersebut sering dikaitkan dengan tekanan ekonomi dan sosial yang dapat meningkatkan risiko kejahatan.
 
 Data kriminalitas yang digunakan merupakan data cacahan (count data). Hasil eksplorasi awal menunjukkan adanya overdispersi, sehingga model regresi Poisson tidak lagi sesuai. Untuk itu, Regresi Binomial Negatif dipilih karena mampu menangani varians data yang lebih besar daripada mean sehingga memberikan estimasi yang lebih akurat.
 
