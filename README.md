@@ -164,6 +164,13 @@ Kami membandingkan dua model untuk mengatasi ini:
 | **Regresi Binomial Negatif (`glm.nb`)** | **373.09** | **LEBIH BAIK** |
 
 **Hasil:** Nilai AIC Regresi Binomial Negatif (373.09) secara drastis lebih rendah daripada Poisson (6074.49). Ini secara statistik mengkonfirmasi bahwa **Regresi Binomial Negatif adalah model yang paling tepat dan valid** untuk menganalisis data kriminalitas Jawa Barat.
+
+**Model Regresi Binomial Negatif**
+
+<p align="center">
+  <img src="results/figures/Persamaan Regresi Binomial Negatif.png" width="800">
+</p>
+
 ---
 
 ## 🏁 Kesimpulan
