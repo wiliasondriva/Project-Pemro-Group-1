@@ -126,6 +126,7 @@ Histogram Jumlah Kejahatan menunjukkan bahwa sebagian besar wilayah hukum memili
 
 <p align="center">
   <img src="results/figures/Histogram Jumlah Kejahatan.png" width="800">
+  <br>
   <i>Gambar 2. Distribusi Jumlah Kriminalitas</i>
 </p>
 
@@ -135,6 +136,7 @@ Wilayah dengan warna yang lebih gelap (merah) menunjukkan jumlah laporan kejahat
 
 <p align="center">
   <img src="results/figures/Peta Kriminalitas.png" width="800">
+  <br>
   <i>Gambar 3. Peta Sebaran Kriminalitas</i>
 </p>
 
