@@ -175,14 +175,14 @@ Kami membandingkan dua model untuk mengatasi ini:
 </p>
 
 *Koefisien Regresi*
-| Variabel                      | Estimate     | Std. Error   | z value | Pr(>z)     |
-| ----------------------------- | ------------ | ------------ | ------- | ---------- |
-| Intercept                     | 5.0600e+00   | 4.610e-01    | 10.976  | <2e-16 *** |
-| Besaran Upah Minimum          | 2.831e-07    | 1.486e-07    | 1.906   | 0.0567 .   |
-| Kepadatan Penduduk            | 2.217e-04    | 3.077e-04    | 0.720   | 0.4713     |
-| PDRB                          | 3.919e-06    | 4.138e-06    | 0.947   | 0.3437     |
-| Tingkat Pengangguran Terbuka  | 1.428e-01    | 7.441e-02    | 1.919   | 0.0550 .   |
-| Putus Sekolah                 | 1.240e-02    | 6.580e-03    | 1.885   | 0.0595 .   |
+| Variabel                      | Estimate     | Std. Error   | z value | Pr(>z)     | Signif. |
+| ----------------------------- | ------------ | ------------ | ------- | ---------- | ------- |
+| Intercept                     | 5.0600e+00   | 4.610e-01    | 10.976  | <2e-16     | ***     |
+| Besaran Upah Minimum          | 2.831e-07    | 1.486e-07    | 1.906   | 0.0567     | .       |
+| Kepadatan Penduduk            | 2.217e-04    | 3.077e-04    | 0.720   | 0.4713     |         |
+| PDRB                          | 3.919e-06    | 4.138e-06    | 0.947   | 0.3437     |         |
+| Tingkat Pengangguran Terbuka  | 1.428e-01    | 7.441e-02    | 1.919   | 0.0550     | .       |
+| Putus Sekolah                 | 1.240e-02    | 6.580e-03    | 1.885   | 0.0595     | .       |
 * Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 *Interpretasi Koefisien*
