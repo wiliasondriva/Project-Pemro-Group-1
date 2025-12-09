@@ -201,6 +201,7 @@ Kami membandingkan dua model untuk mengatasi ini:
 1.  Data kriminalitas di Jawa Barat (level Polres) menunjukkan karakteristik **data cacahan yang mengalami overdispersi kuat**, sehingga tidak dapat dianalisis dengan regresi linear biasa atau Regresi Poisson.
 2.  Visualisasi peta menunjukkan bahwa tingkat kriminalitas cenderung lebih tinggi di wilayah urban dan sub urban yang padat penduduk (sekitar Jakarta dan Bandung Raya).
 3.  Model **Regresi Binomial Negatif** terbukti sebagai model yang paling robust dan akurat secara statistik (AIC terendah) untuk menjelaskan hubungan antara faktor sosial ekonomi dan tingkat kriminalitas di Jawa Barat.
+4.  Berdasarkan pemodelan di Jawa Barat, dapat disimpulkan bahwa tingkat pengangguran terbuka, jumlah putus sekolah, dan upah minimum kabupaten berpengaruh positif terhadap peningkatan jumlah kejahatan yang dilaporkan, sedangkan kepadatan penduduk dan PDRB tidak terbukti berpengaruh signifikan.
 
 ---
 
